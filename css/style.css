@@ -1121,4 +1121,36 @@
       transform: translateX(-50%);
     }
   }
-  
+  .polaroid-frame {
+    background: #fff;
+    display: inline-block;
+    padding: 18px; 
+    border-radius: 15px;
+    box-shadow: 0 12px 36px 0 rgba(0,0,0,0.22), 0 2px 12px rgba(0,0,0,0.13);
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    aspect-ratio: 3/4;
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .polaroid-frame:hover {
+    transform: scale(1.03) rotate(-2deg);
+    box-shadow: 0 18px 48px 0 rgba(0,0,0,0.28), 0 4px 16px rgba(0,0,0,0.18);
+  }
+  .polaroid-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    background: #f3f3f3;
+  }
+  @media (max-width: 576px) {
+    .polaroid-frame {
+      max-width: 95vw;
+    }
+  }
