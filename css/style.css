@@ -9,7 +9,7 @@
   }
   
   body {
-    background-color: #f9f9f8;
+    background-color: #ffffff;
   }
   
   * {
@@ -197,8 +197,8 @@
   }
   
   .navbar-light.sticky-top {
-    top: -100px;
-    transition: 0.5s;
+    top: 0;
+    transition: box-shadow 0.25s ease;
   }
   
   @media (min-width: 992px) {
@@ -344,6 +344,223 @@
     color: var(--light);
   }
   
+  .hero-section {
+    background-color: #ffffff;
+  }
+  
+  .hero-title {
+    font-weight: 900;
+    font-family: 'Montserrat', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    font-size: clamp(2.6rem, 6vw + 1rem, 4.8rem);
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    color: #2b2b2b;
+  }
+
+  /* Gradient-highlight the name */
+  .hero-name {
+    display: inline-block;
+    background: linear-gradient(90deg, #e57a77 0%, #ff9a9e 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 0 0.06rem;
+    text-shadow: 0 10px 24px rgba(229,122,119,0.08);
+  }
+
+  /* Entrance animation for the headline */
+  .hero-title {
+    transform-origin: left center;
+    animation: heroEntrance 700ms cubic-bezier(.22,.9,.32,1) both;
+  }
+
+  @keyframes heroEntrance {
+    0% { opacity: 0; transform: translateY(10px) scale(0.995); }
+    60% { opacity: 1; transform: translateY(-6px) scale(1.02); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  
+  .hero-subtitle {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #555555;
+  }
+  
+  .hero-photo-plain {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero-photo-plain {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .hero-photo-plain:hover {
+    transform: scale(1.03);
+  }
+  
+  @media (max-width: 767.98px) {
+    .hero-section {
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.0rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+  }
+
+  /* Mobile refinements for a cleaner stacked layout */
+  @media (max-width: 767.98px) {
+  .hero-photo-plain {
+    max-width: 300px;
+    margin: 1.5rem auto 0;
+  }
+
+  .hero-section .d-flex {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2.0rem;
+    line-height: 1.05;
+  }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+    }
+
+    .hero-section .btn-primary,
+    .hero-section .btn-light-gray {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      font-size: 0.98rem;
+    }
+
+    .about-intro-text {
+      font-size: 1rem;
+      padding: 0 0.8rem;
+    }
+
+    .about-image-rounded {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .work-experience .display-4 {
+      font-size: 2rem;
+      margin-top: 0.35rem;
+    }
+
+    .work-intro-text {
+      font-size: 1rem;
+    }
+
+    .work-role {
+      font-size: 1rem;
+    }
+
+    .work-dates {
+      font-size: 0.85rem;
+    }
+
+    .work-list {
+      font-size: 0.95rem;
+      padding-left: 0.95rem;
+    }
+
+    .work-item {
+      margin-bottom: 1.25rem;
+    }
+
+    /* Reduce horizontal padding on stacked columns */
+    .work-experience .col-lg-5,
+    .work-experience .col-lg-7,
+    .about-section .col-lg-12 {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+  }
+
+  /* Mobile-only: center the entire Work Experience section while keeping lists readable */
+  @media (max-width: 767.98px) {
+    .work-experience {
+      text-align: center;
+    }
+
+    .work-experience .section-title,
+    .work-experience .display-4,
+    .work-experience .work-intro-text {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .work-experience .row {
+      justify-content: center;
+    }
+
+    .work-experience .col-lg-5,
+    .work-experience .col-lg-7 {
+      width: 100%;
+      max-width: 720px;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+
+    .work-profile-img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    .work-item {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    /* keep bullet lists left-aligned but constrained and centered visually */
+    .work-list {
+      text-align: left;
+      display: inline-block;
+      max-width: 560px;
+      width: 100%;
+      padding-left: 1.1rem;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .hero-title { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 1.05rem; }
+    .hero-photo-plain { max-width: 240px; }
+  }
+
+.hero-section .btn-primary,
+.hero-section .btn-light-gray {
+  padding: 0.9rem 2.6rem;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 575.98px) {
+  .hero-section .btn-primary,
+  .hero-section .btn-light-gray {
+    width: 100%;
+  }
+}
+  
   /*** Section Title ***/
   .section-title h1 {
     position: relative;
@@ -378,27 +595,147 @@
   }
   
   /*** About ***/
+  .about-section {
+    background-color: #ffffff;
+    padding-bottom: 6rem;
+    overflow: visible;
+  }
+
+  .about-intro-text {
+    font-size: 1.05rem;
+    color: #333333;
+  }
+
+  .about-image-rounded {
+    border-radius: 18px;
+  }
+
+.work-experience {
+  background-color: #ffffff;
+  }
+
+  .work-experience .section-title {
+    margin-bottom: 0.25rem;
+  }
+
+  .work-experience .display-4 {
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    color: #222222;
+  }
+
+  .work-intro-text {
+    font-size: 0.98rem;
+    color: #666666;
+  }
+
+  .work-profile-img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   @media (min-width: 992px) {
-    .container.about {
-      max-width: 100% !important;
-    }
-  
-    .about-text {
-      padding-right: calc(((100% - 960px) / 2) + 0.75rem);
+    .work-profile-img {
+      max-width: 260px;
     }
   }
-  
-  @media (min-width: 1200px) {
-    .about-text {
-      padding-right: calc(((100% - 1140px) / 2) + 0.75rem);
-    }
+
+  .work-item {
+  margin-bottom: 2.25rem;
+}
+
+.work-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.work-company {
+  font-weight: 500;
+}
+
+.work-dates {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #999999;
+  margin-bottom: 0.6rem;
+}
+
+.work-list {
+  padding-left: 1.1rem;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444444;
+}
+
+.work-list li + li {
+  margin-top: 0.15rem;
+}
+
+/* Accordion divider consistency */
+.accordion {
+  --accordion-divider-color: #c6c6c6;
+}
+.accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--accordion-divider-color) !important;
+}
+.accordion .accordion-header {
+  margin: 0;
+}
+.accordion .accordion-button {
+  padding: 1rem 1.25rem;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+.accordion .accordion-body {
+  padding: 0.75rem 1.25rem;
+}
+.accordion .accordion-list {
+  margin-bottom: 0.75rem;
+}
+.accordion .accordion-item:last-child .accordion-list {
+  margin-bottom: 0;
+}
+
+.about-me .row {
+  align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+  .about-me .polaroid-frame {
+    position: sticky;
+    top: 110px;
   }
-  
-  @media (min-width: 1400px) {
-    .about-text {
-      padding-right: calc(((100% - 1320px) / 2) + 0.75rem);
-    }
-  }
+}
+
+.about-me .accordion {
+  padding-left: 0;
+}
+.about-me .accordion .accordion-button {
+  padding-left: 0.25rem;
+}
+.about-me .accordion .accordion-body {
+  padding-left: 0.25rem;
+}
+
+.about-me .col-lg-5 {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-me .polaroid-frame {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 110px;
+  will-change: transform;
+  z-index: 2;
+}
+
   
   /*** Service ***/
   .service-item img {
@@ -407,6 +744,41 @@
   
   .service-item:hover img {
     transform: scale(1.1);
+  }
+
+  /* Make service/skills cards opaque with a subtle top border so they don't appear transparent */
+  .service-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    border-top: 6px solid rgba(229,122,119,0.10);
+    padding-top: 1rem;
+    overflow: hidden;
+  }
+
+  /* Target the Skills section cards specifically so other cards aren't affected */
+  #skills .card {
+    background-color: #ffffff;
+    border-top: 6px solid rgba(229,122,119,0.10);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+
+  /* Reduce top border on small screens to keep proportion */
+  @media (max-width: 767.98px) {
+    .service-item,
+    #skills .card {
+      border-top-width: 4px;
+    }
+  }
+
+  /* Ensure the hr inside the skills header stays centered and subtle */
+  #skills hr {
+    width: 50% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-top-color: rgba(0,0,0,0.06) !important;
   }
   
   /*** Feature ***/

@@ -21,6 +21,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
     rel="stylesheet">
+  <!-- Display font for hero -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
@@ -87,7 +89,7 @@
   <!-- Topbar End -->
 
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
       <img src="img/logo.png" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
       <h2 class="m-0 text-primary playball-regular">Shiela Mendoza</h2>
@@ -99,6 +101,7 @@
       <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="#header" class="nav-item nav-link active">Home</a>
         <a href="#about" class="nav-item nav-link">About Me</a>
+        <a href="#experience" class="nav-item nav-link">Work Experience</a>
         <a href="#skills" class="nav-item nav-link">My Skills</a>
         <a href="#projects" class="nav-item nav-link">My Projects</a>
         <a href="#contact" class="nav-item nav-link">Contact</a>
@@ -110,30 +113,21 @@
   <!-- Navbar End -->
 
   <!-- Header Start -->
-  <section id="header">
-    <div class="container-fluid p-0 pb-5">
-      <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-          <img class="img-fluid" src="img/carousel-1.png" alt="">
-          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-            style="background: rgba(32, 32, 32, 0.6);">
-            <div class="container">
-              <div class="row justify-content-start">
-                <div class="col-12 col-lg-8 text-start">
-                  <h5 class="text-white text-uppercase mb-3 animated slideInDown">HEY THERE! NICE TO MEET YOU</h5>
-                  <h1 class="display-3 text-white animated slideInDown mb-4">I'm Shiela Mendoza</h1>
-                  <p class="fs-5 fw-medium text-white mb-4 pb-2">I’m a Summa Cum Laude Computer Science graduate from
-                    National University Manila. Over the years, I’ve developed skills in full-stack development, data
-                    analysis, machine learning, UI/UX design, and project management. I’m looking for opportunities to
-                    enhance my technical skills, gain hands-on experience, and collaborate on innovative, real-world
-                    projects.</p>
-                  <a href="#contact" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Contact Me</a>
-                  <a class="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                    onclick="window.open('docu/Shiela_Mendoza_Resume.pdf', '_blank');">View Resume</a>
-                </div>
-              </div>
-            </div>
+  <section id="header" class="hero-section py-5 py-lg-5">
+    <div class="container px-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <h1 class="hero-title mb-3">Hi, I'm <span class="hero-name">Shiela Mae</span></h1>
+          <p class="hero-subtitle mb-1">I am a <span class="text-primary fw-bold">Software Developer</span> and a</p>
+          <p class="hero-subtitle mb-4"><span class="text-primary fw-bold">Summa Cum Laude</span> Computer Science Graduate.</p>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <a href="#contact" class="btn btn-primary px-4 py-2">Contact Me</a>
+            <button class="btn btn-light-gray px-4 py-2" type="button"
+              onclick="window.open('docu/Shiela_Mendoza_Resume.pdf', '_blank');">View Resume</button>
           </div>
+        </div>
+        <div class="col-lg-5 text-center text-lg-end">
+          <img src="img/work_profile.jpg" alt="Shiela Mae" class="img-fluid hero-photo-plain ms-lg-auto">
         </div>
       </div>
     </div>
@@ -141,194 +135,90 @@
   <!-- Header End -->
 
   <!-- About Me Start-->
-  <section class="about-me py-4" id="about">
+  <section class="about-section py-5" id="about">
     <div class="container px-4">
-      <div class="row align-items-center">
-        <div class="col-lg-5 order-lg-2 text-center">
-          <div class="polaroid-frame mx-auto wow fadeInUp" data-wow-delay="0.1s">
-            <img src="img/profile.png" alt="Profile Picture" class="img-fluid polaroid-img">
-          </div>
-        </div>
-        <div class="col-lg-7 order-lg-1">
-          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title mt-3 text-center text-primary px-3">ABOUT ME</h6>
-            <h1 class="display-4 mb-3">Get To Know Me</h1>
-          </div>
-          <p class="wow fadeInUp" data-wow-delay="0.1s" style="text-align: justify;">
-            Hi, I’m <strong>Shiela</strong>! I’m 22 years old and currently live in Parañaque City.
-            My passion for technology began in childhood, where I spent countless hours exploring computers and playing
-            video games.
-            At just 11 years old, I created my first website, which sparked my interest in coding and led me to study
-            <strong>Mobile and Web Development</strong> in Senior High at <strong>STI College Parañaque</strong>.
-            <br><br>
-            In college, I pursued a <strong>Bachelor’s degree in Computer Science</strong> at <strong>National
-              University</strong>, where I specialized in
-            <strong>machine learning</strong>. I’ve been a consistent <strong>First Honor student</strong>, served as a
-            <strong>project leader</strong> on group projects,
-            and proudly graduated <strong>Summa Cum Laude</strong>. That said, I’m always eager to learn, improve, and
-            grow as a developer.
+      <div class="text-center mb-4 wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title text-primary px-3 mb-2">ABOUT ME</h6>
+        <h1 class="display-4 mb-3">My Background and Journey</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <p class="about-intro-text text-center mb-4 wow fadeInUp" data-wow-delay="0.1s">
+            Hi, I’m Shiela! I’m a <strong>Summa Cum Laude</strong> graduate from <strong>National University Manila</strong> with a degree in
+            <strong> Bachelor of Science in Computer Science</strong>, specializing in <strong>Machine Learning</strong>. I also have a solid
+            background in <strong>Mobile and Web Development</strong> from my course at <strong>STI College Parañaque</strong>.
           </p>
-
-
-
-          <div class="accordion wow fadeInUp" data-wow-delay="0.1s" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne"> Educational Background </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <!-- School 1 -->
-                  <div class="accordion-list mb-3 border-0">
-                    <div class="d-flex align-items-center">
-                      <img src="img/nu-logo.png" class="org-logo me-3" alt="Logo">
-                      <div>
-                        <h5 class="card-title mb-1">National University <span
-                            class="badge bg-success rounded-pill">Summa Cum Laude</span>
-                        </h5>
-                        <p class="card-text mb-0">
-                          <em>2021 - 2025</em>
-                        </p>
-                        <p class="card-text mb-0">Bachelor of Science in Computer Science with specialization in Machine
-                          Learning</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- School 2 -->
-                  <div class="accordion-list mb-3 border-0">
-                    <div class="d-flex align-items-center">
-                      <img src="img/sti-logo.png" class="org-logo me-3" alt="Logo">
-                      <div>
-                        <h5 class="card-title mb-1">STI College Parañaque</h5>
-                        <p class="card-text mb-0">
-                          <em>2018 - 2020</em>
-                        </p>
-                        <p class="card-text mb-0">Information and Communications Technology with specialization in
-                          Mobile App and Web Development</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Work Experience
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <!-- Work Experience 1 -->
-                  <div class="accordion-list mb-3 border-0">
-                    <div class="d-flex align-items-center">
-                      <img src="img/fs-logo.png" class="org-logo me-3" alt="Logo">
-                      <div>
-                        <h5 class="card-title mb-1">FlowerStore.ph</h5>
-                        <p class="card-text mb-0">
-                          <em>Software Developer Intern (2025)</em>
-                        </p>
-                        <p class="card-text mb-0">Took the role of a Software Development Intern at FlowerStore.ph,
-                          where I assisted the tech team by coding, debugging, and participating in code reviews using
-                          React Native, React.js, Next.js, JavaScript, TypeScript, and Git.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Work Experience 1 -->
-                  <!-- Work Experience 2 -->
-                  <div class="accordion-list mb-3 border-0">
-                    <div class="d-flex align-items-center">
-                      <img src="img/phlpost-logo.png" class="org-logo me-3" alt="Logo">
-                      <div>
-                        <h5 class="card-title mb-1">Parañaque Central Post Office</h5>
-                        <p class="card-text mb-0">
-                          <em>Data Management Intern (2019)</em>
-                        </p>
-                        <p class="card-text mb-0">Worked as a Data Management Intern at Parañaque Central Post Office,
-                          where I handled and recorded mail data in the PHLPost database and managed records using
-                          Excel.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Work Experience 2 -->
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Awards and
-                  Certifications </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <!-- Certificate 1 -->
-                  <div class="accordion-list mb-3 border-0">
-                    <div class="d-flex align-items-center">
-                      <img src="img/fcc-logo.png" class="org-logo me-3" alt="Logo">
-                      <div>
-                        <h5 class="card-title mb-1">
-                          <a style="all: unset; cursor: pointer;"
-                            href="https://freecodecamp.org/certification/shielamendoza/machine-learning-with-python-v7"
-                            target="_blank">Machine Learning with Python</a>
-                        </h5>
-                        <p class="card-text mb-0">
-                          <em>2025</em>
-                        </p>
-                        <p class="card-text mb-0">FreeCodeCamp</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Certificate 2 -->
-                  <div class=" mb-3 border-0">
-                    <div class="accordion-list d-flex align-items-center">
-                      <img src="img/fcc-logo.png" class="org-logo me-3" alt="Logo">
-                      <div>
-                        <h5 class="card-title mb-1">
-                          <a style="all: unset; cursor: pointer;"
-                            href="https://freecodecamp.org/certification/shielamendoza/javascript-algorithms-and-data-structures"
-                            target="_blank">JavaScript Data Structures and Algorithms</a>
-                        </h5>
-                        <p class="card-text mb-0">
-                          <em>2020</em>
-                        </p>
-                        <p class="card-text mb-0">FreeCodeCamp</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Certificate 3 -->
-                  <div class="accordion-list mb-3 border-0">
-                    <div class="d-flex align-items-center">
-                      <img src="img/fcc-logo.png" class="org-logo me-3" alt="Logo">
-                      <div>
-                        <h5 class="card-title mb-1">
-                          <a style="all: unset; cursor: pointer;"
-                            href="https://freecodecamp.org/certification/shielamendoza/responsive-web-design"
-                            target="_blank">Responsive Web Design</a>
-                        </h5>
-                        <p class="card-text mb-0">
-                          <em>2020</em>
-                        </p>
-                        <p class="card-text mb-0">FreeCodeCamp</p>
-                      </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p class="about-intro-text text-center mb-4 wow fadeInUp" data-wow-delay="0.15s">
+            I’ve always been an achiever, and I’m passionate about learning new things, improving my skills, and growing as a
+            software developer.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-lg-12">
+          <img src="img/graduation.jpg" alt="Graduation" class="img-fluid about-image-rounded mx-auto d-block">
         </div>
       </div>
     </div>
   </section>
   <!-- About Me End -->
+
+  <!-- Work Experience Start -->
+  <section class="work-experience py-5" id="experience">
+    <div class="container px-4">
+      <div class="row align-items-start g-5">
+        <div class="col-lg-5 mb-5 mb-lg-0 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="mb-3">
+            <h6 class="section-title text-primary mb-2">WORK EXPERIENCE</h6>
+            <h1 class="display-4 mb-2">My Work Experience</h1>
+          </div>
+          <p class="work-intro-text mt-2">
+            I have gained hands-on industry experience through internships and development roles where I worked on both
+            web and mobile applications. Throughout these roles, I collaborated with teams, contributed to improving
+            application performance, and helped develop features that enhance user experience.
+          </p>
+          <p class="work-intro-text mb-0">
+            My experience includes building mobile applications with React Native, maintaining and optimizing existing
+            codebases. These opportunities allowed me
+            to strengthen my technical skills while learning how software development supports real-world business
+            needs.
+          </p>
+        </div>
+        <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="work-item">
+            <h5 class="work-role">Junior Software Developer | VIPTutors</h5>
+            <p class="work-dates">July 2025 - February 2026</p>
+            <ul class="work-list">
+              <li>Pioneered solo mobile development at VIPTutors by developing their first mobile app using React Native.</li>
+              <li>Developed web frontend features using Vue.js, building and maintaining functionality across the platform.</li>
+              <li>Collaborated closely with the CEO to align features with business goals and user needs.</li>
+            </ul>
+          </div>
+
+          <div class="work-item">
+            <h5 class="work-role">Part-Time Freelance UI/UX Frontend Developer</h5>
+            <p class="work-dates">August 2025 - January 2026</p>
+            <ul class="work-list">
+              <li>Pioneered frontend design and development for a confidential HRIS platform using React and TypeScript.</li>
+              <li>Designed UI in Figma and translated mockups into scalable React components.</li>
+              <li>Collaborated closely with stakeholders through regular meetings to refine requirements and deliver frontend features over a 6-month engagement.</li>
+            </ul>
+          </div>
+
+          <div class="work-item mb-0">
+            <h5 class="work-role">Software Developer Intern | FlowerStore.ph</h5>
+            <p class="work-dates">March 2025 - June 2025</p>
+            <ul class="work-list mb-0">
+              <li>Developed and delivered new features for a delivery rider mobile application using React Native.</li>
+              <li>Collaborated with a cross-functional team to improve code quality through refactoring, bug fixes, and GitHub code reviews.</li>
+              <li>Designed and developed high-impact user-facing features such as User Guide, Lite Mode, and Offline Mode to address delivery rider pain points and enhance the overall user experience.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Work Experience End -->
 
   <!-- Skills Start-->
   <section class=" py-5 py-xl-8" id="skills">
@@ -704,36 +594,6 @@
             <button class="btn btn-primary px-4 py-3 rounded-3 d-flex align-items-center gap-2 ms-3"
               onclick="window.open('https://www.canva.com/design/DAGgOTIapXg/PySP8Zg_OIhMe_2dxfbu2w/view?utm_content=DAGgOTIapXg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h375acb1ce0','_blank')">
               <i class="bi bi-window"></i>View Presentation</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 7 -->
-      <article class="postcard light pink wow fadeInUp" data-wow-delay="0.4s">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="img/project7.png" alt="Screenshot of the Application" />
-        </a>
-        <div class="postcard__text t-dark">
-          <h1 class="postcard__title pink">
-            <a href="#">PHYSCCIT: Educational Physics 2 Website</a>
-          </h1>
-          <div class="postcard__subtitle small">
-            <i class="fas fa-calendar-alt mr-2 me-2"></i>2025
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__preview-txt">PHYSCCIT is an interactive learning website I developed using HTML, CSS,
-            Bootstrap, and JavaScript for a Physics 2 course. It’s designed to help users explore and apply fundamental
-            concepts in electricity and magnetism through engaging features like problem-solving calculators and
-            auto-graded quizzes. The site covers key topics including Coulomb’s Law, Electric Fields, Electric
-            Potential, Ohm’s Law, Magnetic Fields, and Electromagnetic Induction. The platform is fully responsive and
-            user-friendly, making it accessible across both desktop and mobile devices.
-
-          </div>
-          <div class="d-flex gap-2 mt-2">
-            <!-- View Demo Button -->
-            <button class="btn btn-primary px-4 py-3 rounded-3 d-flex align-items-center gap-2"
-              onclick="window.open('https://physccit.netlify.app/','_blank')">
-              <i class="bi bi-window"></i>Visit Website</button>
           </div>
         </div>
       </article>
