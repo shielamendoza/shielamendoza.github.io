@@ -1166,6 +1166,16 @@
     object-fit: contain;
     margin: 0 15px;
   }
+
+  .footer-logo {
+    max-width: 180px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: transparent;
+  }
   
   /* Accordion */
   .accordion {
