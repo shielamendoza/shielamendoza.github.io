@@ -411,7 +411,7 @@
     }
 
     .hero-title {
-      font-size: 2.0rem;
+      font-size: 2.6rem;
     }
 
     .hero-subtitle {
@@ -432,7 +432,7 @@
   }
 
   .hero-title {
-    font-size: 2.0rem;
+    font-size: 2.6rem;
     line-height: 1.05;
   }
 
@@ -542,9 +542,24 @@
   }
 
   @media (max-width: 425px) {
-    .hero-title { font-size: 1.8rem; }
+    .hero-title { font-size: 2.2rem; }
     .hero-subtitle { font-size: 1.05rem; }
     .hero-photo-plain { max-width: 340px; }
+  }
+
+  /* Increase About section image height on mobile (allow cropping for larger visual) */
+  @media (max-width: 767.98px) {
+    .about-image-rounded {
+      width: 100% !important;
+      height: 320px !important;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .about-image-rounded {
+      height: 280px !important;
+    }
   }
 
   /* Nudge the header photo slightly to the right on large desktop screens */
@@ -578,6 +593,13 @@
       width: 100% !important;
       height: 52px !important;
       min-height: 52px !important;
+    }
+  }
+
+  /* On small screens, show the header image before the text */
+  @media (max-width: 767.98px) {
+    .hero-section .col-lg-7 {
+      order: -1;
     }
   }
 
