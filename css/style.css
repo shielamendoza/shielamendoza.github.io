@@ -390,7 +390,7 @@
   }
   
   .hero-photo-plain {
-    max-width: 440px;
+    max-width: 720px;
     width: 100%;
     height: auto;
     display: block;
@@ -423,7 +423,7 @@
   /* Mobile refinements for a cleaner stacked layout */
   @media (max-width: 767.98px) {
   .hero-photo-plain {
-    max-width: 300px;
+    max-width: 420px;
     margin: 1.5rem auto 0;
   }
 
@@ -453,7 +453,7 @@
     }
 
     .about-image-rounded {
-      max-width: 420px;
+      max-width: 100%;
       width: 100%;
       border-radius: 12px;
     }
@@ -544,7 +544,41 @@
   @media (max-width: 425px) {
     .hero-title { font-size: 1.8rem; }
     .hero-subtitle { font-size: 1.05rem; }
-    .hero-photo-plain { max-width: 240px; }
+    .hero-photo-plain { max-width: 340px; }
+  }
+
+  /* Nudge the header photo slightly to the right on large desktop screens */
+  @media (min-width: 992px) {
+    .hero-photo-plain {
+      position: relative;
+      left: 40px;
+    }
+  }
+
+  /* Normalize project buttons' height and alignment */
+  #projects .postcard__text .btn,
+  #projects .postcard__text button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    line-height: 1 !important;
+  }
+
+  /* Ensure full-width mobile buttons keep the height */
+  @media (max-width: 767.98px) {
+    #projects .postcard__text .btn,
+    #projects .postcard__text button {
+      width: 100% !important;
+      height: 52px !important;
+      min-height: 52px !important;
+    }
   }
 
 .hero-section .btn-primary,
