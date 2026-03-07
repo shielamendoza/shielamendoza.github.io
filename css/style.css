@@ -675,7 +675,24 @@
     font-weight: 700 !important;
     line-height: 1.2;
     color: #222222;
-    margin-bottom: 1.5rem !important;
+    margin-left: 0;
+    padding-left: 0;
+    text-indent: 0;
+    margin-top: 0;
+    margin-bottom: 0.9rem !important;
+  }
+
+  #contact h6.text-uppercase {
+    margin-left: 0;
+    padding-left: 0;
+    text-indent: 0;
+    margin-bottom: 0.35rem !important;
+    letter-spacing: 0.06em;
+  }
+
+  #contact .col-lg-5 > p.mb-5 {
+    margin-bottom: 1.75rem !important;
+    text-indent: 0;
   }
 
   @media (max-width: 767.98px) {
@@ -687,6 +704,35 @@
   #projects .postcard .small {
     font-size: 0.98rem;
     font-weight: 500;
+    color: #8a8a8a;
+  }
+
+  #projects .postcard__subtitle .fa-calendar-alt {
+    color: #949494;
+  }
+
+  #projects .postcard__bar,
+  #projects .postcard__bar.ms-3 {
+    height: 5px !important;
+    min-height: 5px;
+    border-radius: 999px;
+  }
+
+  #projects .postcard__title,
+  #projects .postcard__title:hover,
+  #projects .postcard__title span,
+  #projects .postcard__title span:hover {
+    cursor: default;
+  }
+
+  #projects .postcard__text::before {
+    display: none !important;
+  }
+
+  #projects .project-mommas .postcard__preview-txt {
+    overflow: visible;
+    text-overflow: clip;
+    height: auto;
   }
 
   #skills .card .text-secondary {
