@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shielamendoza.github.io/sitemap.xml
