@@ -15,6 +15,11 @@
   * {
     font-family: "Poppins", sans-serif;
   }
+
+  /* Force Poppins everywhere, except the cursive brand text and icon glyph fonts. */
+  body :not(.playball-regular):not(.playball-regular *):not(.fa):not(.fas):not(.far):not(.fab):not(.fal):not(.fad):not(.bi):not([class^="fa-"]):not([class*=" fa-"]):not([class^="bi-"]):not([class*=" bi-"]) {
+    font-family: "Poppins", sans-serif !important;
+  }
   
   .fw-medium {
     font-weight: 500 !important;
@@ -350,7 +355,7 @@
   
   .hero-title {
     font-weight: 900;
-    font-family: 'Montserrat', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(2.6rem, 6vw + 1rem, 4.8rem);
     letter-spacing: -0.02em;
     line-height: 1.02;
@@ -420,7 +425,6 @@
     }
   }
 
-  /* Mobile refinements for a cleaner stacked layout */
   @media (max-width: 767.98px) {
   .hero-photo-plain {
     max-width: 420px;
@@ -618,6 +622,10 @@
 }
   
   /*** Section Title ***/
+  .section-title {
+    font-weight: 600;
+  }
+
   .section-title h1 {
     position: relative;
     display: inline-block;
@@ -648,6 +656,29 @@
   
   .section-title.text-start h1::before {
     display: none;
+  }
+
+  /* Keep key section heading styles consistent across the page. */
+  #about .about-right-heading .section-title,
+  #skills h3,
+  .bg-primary .text-center .section-title,
+  #projects .section-title,
+  #contact h6.text-uppercase {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #about .about-right-heading .display-4,
+  #skills .display-4,
+  .bg-primary .text-center .display-4,
+  #projects .display-4,
+  #contact .display-4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
   }
   
   /*** About ***/
@@ -722,7 +753,7 @@
     gap: 0.7rem;
     box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
     transition: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: 100%;
     min-height: auto;
   }
@@ -759,7 +790,7 @@
   .education-content {
     min-width: 0;
     color: #2f2f2f;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: 100%;
   }
 
@@ -771,8 +802,9 @@
   }
 
   .education-school {
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #2f2f2f;
     line-height: 1.35;
   }
@@ -810,8 +842,9 @@
   }
 
   .education-highlights li strong {
+    font-family: 'Poppins', sans-serif;
     color: #2f2f2f;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .sti-logo {
@@ -928,6 +961,17 @@
 
 .work-experience {
   background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  }
+
+  .work-experience .section-title,
+  .work-experience .display-4,
+  .work-intro-text,
+  .work-role,
+  .work-dates,
+  .work-list,
+  .work-list li {
+    font-family: 'Poppins', sans-serif;
   }
 
   .work-experience .section-title {
@@ -935,7 +979,7 @@
   }
 
   .work-experience .display-4 {
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 0.02em;
     color: #222222;
   }
