@@ -16,7 +16,6 @@
     font-family: "Poppins", sans-serif;
   }
 
-  /* Force Poppins everywhere, except the cursive brand text and icon glyph fonts. */
   body :not(.playball-regular):not(.playball-regular *):not(.fa):not(.fas):not(.far):not(.fab):not(.fal):not(.fad):not(.bi):not([class^="fa-"]):not([class*=" fa-"]):not([class^="bi-"]):not([class*=" bi-"]) {
     font-family: "Poppins", sans-serif !important;
   }
@@ -364,7 +363,6 @@
     color: #2b2b2b;
   }
 
-  /* Gradient-highlight the name */
   .hero-name {
     display: inline-block;
     background: linear-gradient(90deg, #e57a77 0%, #ff9a9e 70%);
@@ -375,7 +373,6 @@
     text-shadow: 0 10px 24px rgba(229,122,119,0.08);
   }
 
-  /* Entrance animation for the headline */
   .hero-title {
     transform-origin: left center;
     animation: heroEntrance 700ms cubic-bezier(.22,.9,.32,1) both;
@@ -488,7 +485,6 @@
       margin-bottom: 1.25rem;
     }
 
-    /* Reduce horizontal padding on stacked columns */
     .work-experience .col-lg-5,
     .work-experience .col-lg-7,
     .about-section .col-lg-12 {
@@ -497,7 +493,6 @@
     }
   }
 
-  /* Mobile-only: center the entire Work Experience section while keeping lists readable */
   @media (max-width: 767.98px) {
     .work-experience {
       text-align: center;
@@ -535,7 +530,6 @@
       display: block;
     }
 
-    /* keep bullet lists left-aligned but constrained and centered visually */
     .work-list {
       text-align: left;
       display: inline-block;
@@ -551,7 +545,6 @@
     .hero-photo-plain { max-width: 340px; }
   }
 
-  /* Increase About section image height on mobile (allow cropping for larger visual) */
   @media (max-width: 767.98px) {
     .about-image-rounded {
       width: 100% !important;
@@ -566,7 +559,6 @@
     }
   }
 
-  /* Nudge the header photo slightly to the right on large desktop screens */
   @media (min-width: 992px) {
     .hero-photo-plain {
       position: relative;
@@ -574,7 +566,6 @@
     }
   }
 
-  /* Normalize project buttons' height and alignment */
   #projects .postcard__text .btn,
   #projects .postcard__text button {
     display: inline-flex !important;
@@ -590,7 +581,6 @@
     line-height: 1 !important;
   }
 
-  /* Ensure full-width mobile buttons keep the height */
   @media (max-width: 767.98px) {
     #projects .postcard__text .btn,
     #projects .postcard__text button {
@@ -600,7 +590,6 @@
     }
   }
 
-  /* On small screens, show the header image before the text */
   @media (max-width: 767.98px) {
     .hero-section .col-lg-7 {
       order: -1;
@@ -658,7 +647,6 @@
     display: none;
   }
 
-  /* Keep key section heading styles consistent across the page. */
   #about .about-right-heading .section-title,
   #skills h3,
   .bg-primary .text-center .section-title,
@@ -677,8 +665,49 @@
   #contact .display-4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    font-size: clamp(2rem, 2.1vw + 1rem, 3rem);
     letter-spacing: 0.01em;
     line-height: 1.2;
+  }
+
+  #contact h1.display-4 {
+    font-size: clamp(2rem, 2.1vw + 1rem, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2;
+    color: #222222;
+  }
+
+  @media (max-width: 767.98px) {
+    #contact h1.display-4 {
+      font-size: 2rem !important;
+    }
+  }
+
+  #projects .postcard .small {
+    font-size: 0.98rem;
+    font-weight: 500;
+  }
+
+  #skills .card .text-secondary {
+    color: #2f2f2f !important;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  #skills .skills-intro-text {
+    color: #2f2f2f;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  #about .about-intro-text,
+  #skills .skills-intro-text,
+  .work-intro-text,
+  .work-list,
+  #projects .postcard__preview-txt,
+  #contact .mb-5 {
+    font-size: 0.98rem;
+    line-height: 1.7;
   }
   
   /*** About ***/
@@ -691,7 +720,7 @@
 
   .about-intro-text {
     font-size: 0.98rem;
-    color: #4a4a4a;
+    color: #2f2f2f;
     line-height: 1.7;
   }
 
@@ -986,7 +1015,7 @@
 
   .work-intro-text {
     font-size: 0.98rem;
-    color: #666666;
+    color: #2f2f2f;
   }
 
   .work-profile-img {
@@ -1053,15 +1082,19 @@
 .work-list {
   padding-left: 1.1rem;
   margin: 0;
-  font-size: 0.95rem;
-  color: #444444;
+  color: #2f2f2f;
 }
 
 .work-list li + li {
   margin-top: 0.15rem;
 }
 
-/* Accordion divider consistency */
+#contact p,
+#contact .ps-4 h6:not(.text-primary),
+#contact .mb-5 {
+  color: #2f2f2f;
+}
+
 .accordion {
   --accordion-divider-color: #c6c6c6;
 }
@@ -1133,7 +1166,6 @@
     transform: scale(1.1);
   }
 
-  /* Make service/skills cards opaque with a subtle top border so they don't appear transparent */
   .service-item {
     background-color: #ffffff;
     border-radius: 10px;
@@ -1143,7 +1175,6 @@
     overflow: hidden;
   }
 
-  /* Target the Skills section cards specifically so other cards aren't affected */
   #skills .card {
     background-color: #ffffff;
     border-top: 6px solid rgba(229,122,119,0.10);
@@ -1152,7 +1183,6 @@
     overflow: hidden;
   }
 
-  /* Reduce top border on small screens to keep proportion */
   @media (max-width: 767.98px) {
     .service-item,
     #skills .card {
@@ -1160,7 +1190,6 @@
     }
   }
 
-  /* Ensure the hr inside the skills header stays centered and subtle */
   #skills hr {
     width: 50% !important;
     margin-left: auto !important;
@@ -1670,7 +1699,7 @@
     }
   
     .t-dark {
-      color: #18151f;
+      color: #2f2f2f;
     }
   
     a {
@@ -1724,6 +1753,7 @@
       text-overflow: ellipsis;
       text-align: justify;
       height: 100%;
+      margin-bottom: 1rem;
     }
   
     .postcard__tagbox {
