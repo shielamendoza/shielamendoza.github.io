@@ -675,6 +675,7 @@
     font-weight: 700 !important;
     line-height: 1.2;
     color: #222222;
+    margin-bottom: 1.5rem !important;
   }
 
   @media (max-width: 767.98px) {
