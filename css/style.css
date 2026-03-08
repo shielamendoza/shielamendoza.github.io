@@ -1118,11 +1118,19 @@
     margin-bottom: 0.35rem;
   }
 
+  .work-headline .work-role {
+    text-align: center;
+  }
+
   .work-headline .work-dates {
     margin-left: 0;
     margin-top: 0.12rem;
-    text-align: left;
+    text-align: center;
     white-space: normal;
+  }
+
+  .work-experience .col-lg-7 .work-item:first-child {
+    margin-bottom: 0.95rem;
   }
 }
 
