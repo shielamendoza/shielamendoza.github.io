@@ -56,6 +56,7 @@
   
   .contact-form {
     background-color: var(--primary);
+    border-radius: 1.1rem;
   }
   
   
@@ -1238,7 +1239,7 @@
   .footer-contact-card {
     background:
       linear-gradient(122deg, #de7c79 0%, #d96f6e 56%, #cf6668 100%);
-    border-radius: 1.25rem;
+    border-radius: 1.1rem;
     overflow: visible;
     display: flex;
     align-items: stretch;
