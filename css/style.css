@@ -1665,10 +1665,27 @@
   
   input:focus,
   select:focus,
-  textarea:focus,
-  button:focus {
+  textarea:focus {
     outline: 2px solid var(--bs-primary) !important;
     box-shadow: none;
+  }
+
+  /* Remove mouse-click glow on buttons injected by Bootstrap focus styles */
+  button:focus,
+  .btn:focus,
+  .btn:active:focus,
+  .btn-check:focus + .btn {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Keep accessible focus indicator for keyboard navigation */
+  button:focus-visible,
+  .btn:focus-visible,
+  .btn-check:focus + .btn:focus-visible {
+    outline: 2px solid var(--bs-primary) !important;
+    outline-offset: 2px;
+    box-shadow: none !important;
   }
   .lds-ripple {
     color: var(--primary);
