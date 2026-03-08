@@ -188,6 +188,15 @@
     .navbar-light .navbar-nav {
       border-top: 1px solid #eeeeee;
     }
+
+    .navbar-light .navbar-nav .nav-link:not(.active):hover,
+    .navbar-light .navbar-nav .nav-link:not(.active):focus {
+      color: var(--dark);
+    }
+
+    .navbar-light .navbar-nav .nav-link.active {
+      color: var(--primary);
+    }
   }
   
   .navbar-light .navbar-brand,
