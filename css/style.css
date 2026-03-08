@@ -1112,10 +1112,18 @@
 }
 
 @media (max-width: 767.98px) {
+  .work-experience .row {
+    --bs-gutter-y: 0.75rem;
+  }
+
   .work-headline {
     display: block;
     text-align: left;
     margin-bottom: 0.35rem;
+  }
+
+  .work-experience .col-lg-5 {
+    margin-bottom: 0.85rem !important;
   }
 
   .work-headline .work-role {
@@ -1129,8 +1137,12 @@
     white-space: normal;
   }
 
-  .work-experience .col-lg-7 .work-item:first-child {
-    margin-bottom: 0.95rem;
+  .work-experience .col-lg-7 .work-item {
+    margin-bottom: 3rem !important;
+  }
+
+  .work-experience .col-lg-7 .work-item:last-child {
+    margin-bottom: 0;
   }
 }
 
