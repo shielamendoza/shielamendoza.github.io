@@ -721,10 +721,10 @@
   }
 
   .about-section .about-intro-text {
-    text-align: center;
-    max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .education-image-wrap {
@@ -1169,7 +1169,21 @@
     border-top: 6px solid rgba(229,122,119,0.10);
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    overflow: hidden;
+    overflow: visible;
+    margin: 0.5rem 0;
+  }
+
+  /* Scoped fixes for skills area to prevent visual clipping of card content and buttons */
+  #skills {
+    overflow: visible;
+  }
+
+  #skills .container {
+    overflow: visible;
+  }
+
+  #skills .card .card-body {
+    padding-bottom: 1.5rem;
   }
 
   @media (max-width: 1199.98px) {
