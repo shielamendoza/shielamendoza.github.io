@@ -291,12 +291,11 @@
 
   .hero-name {
     display: inline-block;
-    background: linear-gradient(90deg, #e57a77 0%, #ff9a9e 70%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    background: none;
+    color: var(--primary);
     padding: 0 0.06rem;
-    text-shadow: 0 10px 24px rgba(229,122,119,0.08);
+    text-shadow: none;
+    font-weight: 700;
   }
 
   .hero-title {
@@ -495,7 +494,10 @@
   @media (min-width: 992px) {
     .hero-photo-plain {
       position: relative;
-      left: 40px;
+      left: 0;
+      margin-left: auto;
+      max-width: 100%;
+      object-fit: contain;
     }
   }
 
